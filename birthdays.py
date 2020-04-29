@@ -23,7 +23,7 @@ def updateFile():
         if isinstance(p["Date of Birth"], int) or not len(str(p["Date of Birth"])):
             continue
         temp = {
-            "name": p["Full Name"].strip(),
+            "name": p["Name"].strip(),
             "tz": p["Timezone"],
             "dob": p["Date of Birth"],  # format: %d.%m.%Y
             "username": p["Telegram"].strip(),

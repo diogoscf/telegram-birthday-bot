@@ -85,10 +85,10 @@ def wishHB(context: CallbackContext):
 
 def getBdays():
     """Parses the birthdays.json file"""
-    data = requests.get(
-        "https://raw.githubusercontent.com/diogoscf/telegram-birthday-bot/master/birthdays.json"
-    ).json()
-    # data = json.load(open("birthdays.json", "r", encoding="utf-8"))
+    # data = requests.get(
+    #     "https://raw.githubusercontent.com/diogoscf/telegram-birthday-bot/master/birthdays.json"
+    # ).json()
+    data = json.load(open("birthdays.json", "r", encoding="utf-8"))
     output = []
     for p in data:
         diff = [int(x) for x in p["tz"].replace("UTC", "").split(":")]
